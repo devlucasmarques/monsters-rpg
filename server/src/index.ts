@@ -1,7 +1,6 @@
-import app from './app';
+import { startSocket } from './app';
 
 const port = 5000;
 const host = '0.0.0.0';
 
-// Start server
-app.listen(port, host);
+startSocket(port, host);

@@ -1,14 +1,21 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import Head from 'next/head';
+import { appSocket } from '../services/socket-io';
 
-const Home: FC = () => (
-  <div>
-    <Head>
-      <title>Monsters RPG</title>
-    </Head>
+const Home: FC = () => {
+  useEffect(() => {
+    appSocket.open();
+  }, []);
 
-    <main />
-  </div>
-);
+  return (
+    <div>
+      <Head>
+        <title>Monsters RPG</title>
+      </Head>
+
+      <main />
+    </div>
+  );
+};
 
 export default Home;

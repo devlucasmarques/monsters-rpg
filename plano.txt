@@ -1,0 +1,144 @@
+pira-app@ftp.pira-app.com.br
+
+
+Seção01 - Proposta do curso
+	Aula01 - Introdução
+		Olá Pessoal, como o mercado de tecnologia e de games estão muito interessantes, resolvi criar um curso especial exclusivo. 
+		Eu tive essa ideia devido a minhas pesquisa sobre o assunto e nunca encontrei todas as informações num só lugar, então fui recolhendo muito material durante algum
+		tempo, consegui realizar meu objetivo e agora resolvi disponibilizar minha pesquisa pra vocês.
+		Eu acredito que muitos programadores sempre quiseram criar seus jogos multiplayer e também rpgs em turno, sabe como os mitos Chono Tiger, batalhas Pokemon, Final Fantasy 
+		entre outros, estou até emocionado, enfim com esse material que separei, irei ensinar tecnologias para criar o seu servidor, usando nodeJs e como criar uma sistema de batalhas
+		rpg completo em Unity, (mostrar)
+		iremos criar um jogo de monstros com elementos agua, fogo, elétrico, gelo e toda regra de estratégia (mostrar)
+		Também criaremos leveis e fazer nossos monstros ganhar experiencia e aprender novos ataques. 
+		Criaremos jogadores com inteligencia artificial e partidas entre dois jogadores desconhecidos.
+		Criaremos um sistema de torneio e guardaremos tudo no banco de dados MongoDB. 
+		Tudo isso usando boas práticas de programação como MVC
+		E ai, vai ficar fora dessa, venha agregar mais conhecimentos, espero vcs.
+		
+	Aula02 - Apresentação (Resumo)
+
+Seção02 - Configurando Ambiente
+	Aula01 - Instalando Node
+	Aula02 - Instalando VSCode
+	Aula03 - Instalando Plugins
+	Aula04 - Instalando MongoDB e Mongo Compass
+	
+Seção03 - Preparando Backend em Node
+	Aula01 - Iniciando express, http, ejs, bodyParser, socket, etc... (arquivo package.json para download / app.js & server.js)
+	Aula02 - Configurando mongo local pelo mongoose (config/mongo.db)
+	Aula03 - Criando Model Atack (name, damage, energy, type)
+	Aula04 - Criando Controller e Route Atack (router.ts)
+	Aula05 - Criando Model Monster (name, type, atack, defense, atacks)
+	Aula06 - Criando Controller e Route Monster
+	Aula07 - Criando Model Player (name, username, password, numberVictory, money, monsters)
+	Aula08 - Criando Controller e Route Player
+	Aula09 - Criando Controller e Route Game
+	
+	
+	
+Seção04 - Front-end
+	Aula - Apresentação: Criação de contas, gerencias, jogo, etc
+	Aula - Tela de Login construção (html)
+	Aula - Tela de Login estilização (css)
+	Aula - Tela de cadastros de players (cópia e alteração)
+	Aula - Criando o menu
+	Aula - Listar ataques	
+	Aula - Adicionar ataques	
+	Aula - Deletar ataques	
+	Aula - Editar ataques
+	Aula - Listar monstros	
+	Aula - Adicionar monstro	
+	Aula - Deletar monstro	
+	Aula - Editar monstro	
+	Aula - Editar ataques do monstro	
+	Aula - Listar jogadores
+	Aula - Deletar jogador	
+	Aula - Exibir detalhes do jogador
+	
+
+	Aula - Logando jogador - Pegando informações de Monstros e Ataques
+	Aula - Tela de apresentação do jogador
+	Aula - Carrregando os dados de apresentação do jogador
+	Aula - Tela de monster e atack
+	Aula - Carregando dados monster e atacks
+	Aula - Barra de vida, energia e nivel
+	Aula - Carregando dados Barra de vida, energia e nivel
+	Aula - Omitindo player e monsters antes do login
+
+Seção05
+	Aula - (player online, logando, iniciar partida, atacar, desistir, dormir, moedas diarias ganhar baus, abrir baus, sair partida, player offline(caiu))
+	Aula - Iniciando partida Parte1
+	Aula - Iniciando partida Parte2
+	Aula - Logando jogador - Primeira mensagem
+	Aula - Logando jogador - Pegando informações de Monstros e Ataques
+	Aula - Atacar, Ajustando ordem de player e monstros no Back-end
+	Aula - Atacar, Ajustando ordem de player e monstros no Front-end	
+	Aula - Atacar, Calculando no Back-end 
+	Aula - Atacar, Calculando no Back-end, considerando tipo	
+	Aula - Atacar, Selecionando monstro no Front-end
+	Aula - Condição de Vitoria e Derrota no Back-end
+	Aula - Condição de Vitoria e Derrota no Front-end	
+	Aula - Ganhando exp, subindo level	
+	Aula - Adicionando ataques ao monstro de acordo com seu nivel	
+	Aula - Descansando Monsters Back-end
+	Aula - Descansando Monsters, criando uma rotina para tempo	
+	Aula - Descansando Monsters Front-end
+	Aula - Gastando ruby para acordar o Monstro
+	Aula - Desistir da batalha
+	Aula - Ganhando moedas diarias
+	Aula - Criando baus	
+	Aula - Abrir baus
+	Aula - Recompensas do bau (Moedas, Rubys, Novos Monstros, Experiencia)
+	Aula - Desconectando socket
+
+
+	Aula - Criando NPC
+	Aula - Criando Model Enemy e associando aos NPCs
+
+
+Seção Unity
+	Aula - Apresentando a ferramenta
+	Aula - Cena de Login
+	Aula - Primeiro Serviço Socket
+	Aula - Cena Principal
+	Aula - Animando Bau
+	Aula - Cena de batalha
+	
+	
+
+
+Seção Lapidar
+	Aula - Criando logIn de um novo player
+	Aula - Selecionar no maximo 3 monstros para batalha
+	Aula - Fazendo Log Out (Salvando progresso no mongo)
+	Aula - Caiu a internet após logado
+	Aula - Perder a vez em 5 segundos
+
+
+
+
+<a href="https://br.freepik.com/fotos-vetores-gratis/fundo">Fundo vetor criado por vector_corp - br.freepik.com</a>
+<a href="https://www.freepik.com/free-photos-vectors/gold">Gold vector created by freepik - www.freepik.com</a>
+<a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by freepik - www.freepik.com</a>
+<a href="https://www.freepik.com/free-photos-vectors/frame">Frame vector created by upklyak - www.freepik.com</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

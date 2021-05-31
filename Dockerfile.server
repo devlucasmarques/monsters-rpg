@@ -1,0 +1,26 @@
+FROM node:14.15.4 as base
+WORKDIR /app
+COPY ./package.json .
+COPY ./yarn.lock .
+RUN yarn
+
+
+FROM base as development
+WORKDIR /app
+COPY . .
+EXPOSE 5000
+CMD ["yarn", "dev"]
+
+
+FROM base as test
+WORKDIR /app
+COPY . .
+RUN yarn lint && yarn test
+
+
+FROM base as production
+WORKDIR /app
+COPY . .
+EXPOSE 5000
+RUN yarn build
+CMD ["yarn", "start"]

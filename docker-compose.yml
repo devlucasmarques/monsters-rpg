@@ -1,0 +1,52 @@
+version: "3.4"
+
+services:
+  server-test:
+    container_name: monster-rpg-server-test
+    build:
+      context: ./server
+      dockerfile: ../Dockerfile.server
+      target: test
+    volumes:
+      - ./server:/app
+    networks:
+      - monster-rpg-networks
+    environment:
+      NODE_ENV: development
+
+  server-dev:
+    container_name: monster-rpg-server-dev
+    build:
+      context: ./server
+      dockerfile: ../Dockerfile.server
+      target: development
+    ports:
+      - 5000:5000
+    volumes:
+      - ./server:/app
+    networks:
+      - monster-rpg-networks
+    environment:
+      NODE_ENV: development
+
+  client-test:
+    container_name: monster-rpg-client-test
+    build:
+      context: ./client
+      dockerfile: ../Dockerfile.client
+      target: test
+
+  client-dev:
+    container_name: monster-rpg-client-dev
+    build:
+      context: ./client
+      dockerfile: ../Dockerfile.client
+      target: development
+    volumes:
+      - ./client:/app
+    ports:
+      - 3000:3000
+
+networks:
+  monster-rpg-networks:
+    driver: bridge

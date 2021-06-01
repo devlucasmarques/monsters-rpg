@@ -75,20 +75,6 @@ services:
     networks:
       - monster-rpg-networks
 
-  postgres:
-    image: postgres
-    restart: always
-    environment:
-      POSTGRES_DB: monsters-rpg
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: root
-
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080
-
 networks:
   monster-rpg-networks:
     driver: bridge

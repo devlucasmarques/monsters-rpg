@@ -2,8 +2,6 @@ import { NextFunction, Request, Response, Router } from 'express';
 
 const IndexController: Router = Router();
 
-export default IndexController;
-
 IndexController.get(
   '/',
   async (req: Request, res: Response, next: NextFunction) => {
@@ -14,3 +12,5 @@ IndexController.get(
     }
   },
 );
+
+export default IndexController;

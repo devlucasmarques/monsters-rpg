@@ -1,5 +1,10 @@
 import mongoose, { Schema } from 'mongoose';
 
+const MonsterAtack = new Schema({
+  atack: { type: mongoose.Schema.Types.ObjectId, ref: 'AtackModel' },
+  level: Number
+});
+
 export const Monster = new Schema(
   {
     id: { type: mongoose.Schema.Types.ObjectId, required: false },
@@ -7,7 +12,7 @@ export const Monster = new Schema(
     type: Number,
     atack: Number,
     defense: Number,
-    atacks: [{ type: mongoose.Schema.Types.ObjectId, ref: 'AtackModel' }]
+    atacks: [MonsterAtack]
   },
   { timestamps: true }
 );

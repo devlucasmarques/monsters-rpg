@@ -56,7 +56,9 @@ MonsterControler.put('/monster/:_id', async (req: Request, res: Response) => {
 MonsterControler.get('/monster/:_id', async (req: Request, res: Response) => {
   try {
     const { _id } = req.params;
-    const monsterRes = await MonsterModel.findById(_id).populate('atacks');
+    const monsterRes = await MonsterModel.findById(_id).populate(
+      'atacks.atack'
+    );
     monsterRes
       ? res.status(200).json(monsterRes)
       : res.status(404).json('Monstro não encontrado!');

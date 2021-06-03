@@ -1,7 +1,7 @@
 import express, { Application } from 'express';
-import { routes } from './routes';
 import socketIo, { Socket } from 'socket.io';
 import { createServer } from 'http';
+import router from './routes';
 
 const app: Application = express();
 const httpServer = createServer(app);
@@ -20,7 +20,8 @@ const startSocket = (port: number, host: string) =>
     console.log('socket online');
   });
 
+app.use(express.json());
+app.use(router);
+
 export { startSocket };
 export default app;
-
-routes(app);

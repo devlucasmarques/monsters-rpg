@@ -1,7 +1,13 @@
+/* eslint class-methods-use-this: off */
+
 import mongoose from 'mongoose';
 
 class Connection {
   constructor() {
+    this.connect();
+  }
+
+  async connect(): Promise<boolean> {
     const MONGO_USERNAME = 'root';
     const MONGO_PASSWORD = 'root';
     const MONGO_HOSTNAME = 'mongo';
@@ -15,12 +21,18 @@ class Connection {
     mongoose.set('useFindAndModify', false);
     mongoose.set('useCreateIndex', true);
     mongoose.set('useUnifiedTopology', true);
-    mongoose
+    return mongoose
       .connect(url, {
-        serverSelectionTimeoutMS: 2000,
+        serverSelectionTimeoutMS: 5000
       })
-      .then(() => console.log('Mongodb - ok'))
-      .catch((err) => console.log(`Mongo - error: ${err}`));
+      .then(() => {
+        console.log('Mongodb - ok');
+        return true;
+      })
+      .catch((err) => {
+        console.log(`Mongo - error: ${err}`);
+        return false;
+      });
   }
 }
 

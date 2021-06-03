@@ -3,6 +3,7 @@ import IndexController from './controllers/indexController';
 import AtackController from './controllers/atackController';
 import MonsterControler from './controllers/monsterController';
 import PlayerController from './controllers/playerController';
+import ItemController from './controllers/itemController';
 
 const router = Router();
 router.get('/', IndexController);
@@ -24,5 +25,11 @@ router.post('/player', PlayerController);
 router.delete('/player/:_id', PlayerController);
 router.put('/player/:_id', PlayerController);
 router.get('/player/:_id', PlayerController);
+
+router.get('/items', ItemController);
+router.post('/item', ItemController);
+router.delete('/item/:_id', ItemController);
+router.put('/item/:_id', ItemController);
+router.get('/item/:_id', ItemController);
 
 export default router;

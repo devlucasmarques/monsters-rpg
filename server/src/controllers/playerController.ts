@@ -51,9 +51,9 @@ PlayerController.put('/player/:_id', async (req: Request, res: Response) => {
 PlayerController.get('/player/:_id', async (req: Request, res: Response) => {
   try {
     const { _id } = req.params;
-    const playerRes = await PlayerModel.findById(_id).populate(
-      'monsters.monster'
-    );
+    const playerRes = await PlayerModel.findById(_id)
+      .populate('monsters.monster')
+      .populate('items.item');
     playerRes
       ? res.status(200).json(playerRes)
       : res.status(404).json('Player não encontrado');

@@ -9,6 +9,11 @@ const MonstersPlayer = new Schema({
   dateSleep: Date
 });
 
+const ItemPlayer = new Schema({
+  item: [{ type: mongoose.Schema.Types.ObjectId, ref: 'ItemModel' }],
+  dataOpen: Date
+});
+
 const Player = new Schema(
   {
     id: { type: mongoose.Schema.Types.ObjectId, required: false },
@@ -16,7 +21,7 @@ const Player = new Schema(
     password: String,
     money: Number,
     ruby: Number,
-    items: [Number],
+    items: [ItemPlayer],
     monsters: [MonstersPlayer],
     gameNumber: Number,
     victoryNumber: Number

@@ -2,6 +2,7 @@ import React, { FC, useEffect } from 'react';
 import Head from 'next/head';
 import { appSocket } from '../services/socket-io';
 import MonsterStatus from '../components/monster-status';
+import Button from '../components/button';
 
 const Home: FC = () => {
   useEffect(() => {
@@ -32,6 +33,7 @@ const Home: FC = () => {
           energy={90}
           side="right"
         />
+        <Button bgcolor="red" textcolor="white" />
       </main>
     </div>
   );

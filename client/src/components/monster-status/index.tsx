@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { IMonsterStatus } from './interface';
-import { XP, Level, Text, HeadImg, Bar } from './styles';
+import { XP, Level, Text, HeadImg, Bar, Container } from './styles';
 
 const MonsterStatus: FC<IMonsterStatus> = ({
   name,
@@ -11,7 +11,7 @@ const MonsterStatus: FC<IMonsterStatus> = ({
   side
 }) => {
   return (
-    <div>
+    <Container>
       <Level side={side}>{level}</Level>
       <XP progress={xp} side={side}>
         <svg>
@@ -29,7 +29,7 @@ const MonsterStatus: FC<IMonsterStatus> = ({
       <Bar progress={energy} width={100} top={-33} color="#00ee00" side={side}>
         <div />
       </Bar>
-    </div>
+    </Container>
   );
 };
 

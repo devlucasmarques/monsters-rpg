@@ -64,7 +64,7 @@ const Level = styled.div<ISide>`
   text-align: center;
   font-weight: 900;
   font-size: 10px;
-  margin: -10px 0 0 ${(props) => (props.side === 'left' ? '25px' : '125px')};
+  margin: 3px 0 10px ${(props) => (props.side === 'left' ? '22px' : '122px')};
 `;
 
 const Text = styled.div<ISide>`
@@ -115,4 +115,8 @@ const Bar = styled.div<IBar>`
   }
 `;
 
-export { XP, Level, Text, HeadImg, Bar };
+const Container = styled.div`
+  width: 170px;
+`;
+
+export { XP, Level, Text, HeadImg, Bar, Container };
